@@ -1,7 +1,27 @@
-/* https://www.wowthemes.net 
-Beauttio HTML Template
-v1.0.0
+/* RESPONSIVE CSS 
 */
+
+
+
+
+/* 1 columna para smartphones */
+
+.breakpoint  {
+  max-width: 100%;
+  display: inline-block;
+  }
+  /* 2 columnas para tablets */
+  @media (min-width: 420px) {
+  .breakpoint  {
+  max-width: 48%;
+  }
+  }
+  /* 4 columnas para grandes dispositivos*/
+  @media (min-width: 760px) {
+  .breakpoint  {
+  max-width: 24%;
+  }
+  }
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -90,9 +110,12 @@ a {text-decoration:none;}
   background-color: rgba(0, 0, 0, 0.3);
 }
 .background:first-child {
+  
   background-image: url(../img/andrespeluqueria.jpeg);
+
   -webkit-transform: translateY(-15vh);
           transform: translateY(-15vh);
+          
 }
 .background:first-child .content-wrapper {
   -webkit-transform: translateY(15vh);
@@ -1125,7 +1148,7 @@ p.comment-form-email, p.comment-form-author, p.comment-form-url {
 		text-align:center;
 		position:relative;
 		display:block;
-		vertical-align:middle;
+		
 		margin-top:0px;
 		margin-bottom:0px;
 		left:auto;

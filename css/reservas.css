@@ -1,5 +1,24 @@
 
 	
+.breakpoint  {
+  max-width: 100%;
+  display: inline-block;
+  }
+  /* 2 columnas para tablets */
+  @media (min-width: 420px) {
+  .breakpoint  {
+  max-width: 48%;
+  }
+  }
+  /* 4 columnas para grandes dispositivos*/
+  @media (min-width: 760px) {
+  .breakpoint  {
+  max-width: 24%;
+  }
+  }
+
+
+
 .menu-outer:hover ~ .menu-close {
     margin-right:-100px;
   }
@@ -230,7 +249,9 @@ nav li a:hover {
     line-height: 1.4;
     color: var(--color-white);
     margin: 0;
-    background: url(https://cdn.pixabay.com/photo/2019/06/02/17/33/woman-4246954_960_720.jpg);
+    width: 960;
+    height:640;
+    background:url(https://cdn.pixabay.com/photo/2019/06/02/17/33/woman-4246954_960_720.jpg);
       background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -249,6 +270,7 @@ nav li a:hover {
    color: white;
     text-align: center;
     font-size: 32px;
+    
 
   }
 
