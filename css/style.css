@@ -284,7 +284,7 @@ font-size: 17px;
 }
 .aboutbadge.black{
     background-color: rgba(0,0,0,0.5);
-    color: rgba(255,255,255,0.5);
+    color:rgba(151, 238, 12, 0.5);
     width: 350px;
     height: 350px;
     font-size: 14px;
@@ -293,7 +293,7 @@ font-size: 17px;
     margin-left: 60px;
 }
 .aboutbadge.black span {
-	    font-size: 16px;
+	    font-size: 18px;
     font-weight: 300;
     padding: 90px;
 }
@@ -318,21 +318,21 @@ font-size: 17px;
 }
 .voucher-whitetransparent {
 	    display: Inline-block;
-    width: 300px;
-    height: 300px;
-    background: rgba(255,255,255,0.5);
+    width: 350px;
+    height: 350px;
+    background: rgba(255, 253, 253, 0.5);
     color: #333;
     border-radius: 100%;
 	
 }
 .voucher-whitetransparent i.fa {
-	    color: #25E2F7;
-    font-size: 25px;
+	    color: #000000;
+    font-size: 30px;
 }
-.voucher-whitetransparent h2 {
+.voucher-whitetransparent h2 {s
 	line-height:1.5;
 	font-weight:300;
-	color:#333;
+	color:rgb(0, 0, 0);
 	padding:70px 30px 30px 30px;
 	font-size:22px;
 	
@@ -350,7 +350,7 @@ font-size: 17px;
     height: 220px;
     border-radius: 50%;
     padding: 7%;
-	color:rgba(255,255,255,0.5);
+	color:rgba(151, 238, 12, 0.5);
 	line-height: 1.4;
 	margin-left:30px;
 }
@@ -474,7 +474,7 @@ a.fullpricelist {
     width: 330px;
     height: 330px;
     background: rgba(90, 227, 241, 0.5);
-    color: #333;
+    color: rgb(255, 255, 255);
     border-radius: 100%;
 }
 
@@ -483,7 +483,7 @@ a.fullpricelist {
   text-align: center;
   overflow: hidden;
      padding: 25% 20%;
-	 color:rgba(255,255,255,0.7);
+	 color:rgba(0, 0, 1, 1);
 }
 .testimonial-widget h3 {
 	margin-bottom:20px;
@@ -627,15 +627,15 @@ a.fullpricelist {
     display: inline-block;
     width: 200px;
     height: 200px;
-    background: rgba(253, 216, 34, 0.44);
-    color: rgba(255,255,255,0.5);
+    background: rgba(240, 236, 6, 0.44);
+    color: rgba(0, 0, 0, 1);
     border-radius: 100%;
     margin-left: -60px;
 }
 .contactaddress {
 	    padding: 20%;
 }
-a.map {border-bottom: 1px dashed;    color: #fff;}
+a.map {border-bottom: px dashed;    color: rgb(255, 255, 255);}
 
 
 .logoarea {width:46%;float:left;}
@@ -743,7 +743,7 @@ a.map {border-bottom: 1px dashed;    color: #fff;}
     margin: -75px 0 0 -75px;
     border-radius: 50%;
     border: 3px solid transparent;
-    border-top-color: #fff;
+    border-top-color: rgb(0, 0, 0);
 
     -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
     animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
@@ -774,7 +774,7 @@ a.map {border-bottom: 1px dashed;    color: #fff;}
         bottom: 15px;
         border-radius: 50%;
         border: 3px solid transparent;
-        border-top-color: #25E2F7;
+        border-top-color: #2be6b7;
 
         -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
           animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
@@ -810,7 +810,7 @@ a.map {border-bottom: 1px dashed;    color: #fff;}
         top: 0;
         width: 51%;
         height: 100%;
-        background: #222;
+        background: rgb(255, 255, 255);
         z-index: 1000;
     }
 
@@ -861,7 +861,7 @@ a.map {border-bottom: 1px dashed;    color: #fff;}
 .menu-outer:hover ~ .menu-close {
   margin-right:-100px;
 }
-.menu-outer:hover .bar {     background: rgba(145, 255, 255, 0.65); }
+.menu-outer:hover .bar {     background: rgba(0, 0, 0, 0.65); }
 .menu-inner ul {
   top:50%;
   -webkit-transform:translateY(-50%);
@@ -883,7 +883,7 @@ html, body {
   left: 100%;
   margin-left: -100px;
   height: 200%;
-      background: rgba(145, 255, 255, 0.65);
+      background: rgba(255, 230, 0, 0.65);
   -webkit-transition: all ease .5s;
   -moz-transition: all ease .5s;
   -ms-transition: all ease .5s;
@@ -901,7 +901,7 @@ html, body {
   transform: rotate(-45deg);
 }
 .menu-outer:hover {
-  background: rgba(40, 154, 154, 0.95);
+  background: rgba(0, 0, 0, 0.95);
   left: 0;
   margin-left: 0;
   -webkit-transform: rotate(0deg);
