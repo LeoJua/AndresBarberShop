@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -22,10 +21,9 @@
     <!-- Style -->
     <link rel="stylesheet" href="css/login/style.css">
 
-    <title>Login #8</title>
+    <title>Registro</title>
   </head>
   <body class="body">
-
 
 
 	<div class="menu-outer">
@@ -60,55 +58,52 @@
     </div>
 	
 
-
-      <div class="content">
+    <form method="post">
+  <div class="content">
     <div class="container">
       <div class="row">
         <div class="col-md-6 order-md-2">
-          <img src="img/puestos.jpeg" alt="Image" class="img-fluid">
+          <img src="https://img.freepik.com/vector-gratis/ilustracion-dibujos-animados-usuario-femenino-que-ingresa_241107-682.jpg?size=626&ext=jpg" alt="Image" class="img-fluid">
         </div>
         <div class="col-md-6 contents">
           <div class="row justify-content-center">
             <div class="col-md-8">
               <div class="mb-4">
-              <h3>Ingresa como  <strong>Administrador</strong></h3>
-              <p class="mb-4">Espacio reservado para administradores, si no eres uno, por favor omite esta pagina.</p>
+              <h3>Registro <strong>usuarios nuevos</strong></h3>
+           
             </div>
+            <div class="form-group first">
+                <p>Identificación:            
+                    <input name="dni" placeholder="CEDULA"
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    type = "number"
+                    maxlength = "10" required/>
+                    </p>
+                </div>
 
-            <form action="autenticar.php" method="post">
+            
+            
+            <form action="#" method="post">
               <div class="form-group first">
                 <label for="username">Usuario</label>
-                <input  type="text" name="username"class="form-control" id="username">
+                <input name=usuario  type="text" class="form-control" id="username" required>
 
               </div>
               <div class="form-group last mb-4">
                 <label for="password">Contraseña</label>
-                <input type="password" name="password"class="form-control" id="password">
+                <input  name="password"type="password" class="form-control" id="password"required>
                 
               </div>
               
-              <div class="d-flex mb-5 align-items-center">
-                <label class="control control--checkbox mb-0"><span class="caption">Recuerdarme</span>
-                  <input type="checkbox" checked="checked"/>
-                  <div class="control__indicator"></div>
-                </label>
-                <span class="ml-auto"><a href="#" class="forgot-pass">¿Olvidaste tu clave?</a></span> 
-                 </div>
+                     
+              <input name="submit" type="submit" value="Registrate"class="btn text-white btn-block btn-primary" required>
 
-              <input type="submit" value="Ingresar" class="btn text-white btn-block btn-primary">
-           <br> <p class ="mb-4"> Si eres nuevo click en registrarte</p>
-           <a class="btn text-white btn-block btn-primary" href="registro.php">Registrarse</a>
-                </a>
-              </div>
-            </form>
-            </div>
-          </div>
-          
-        </div>
+             
+              
         
-      </div>
-    </div>
-  </div>
+    
+   
+ 
 
   
     <script src="js/jquery-3.3.1.min.js"></script>
@@ -116,4 +111,33 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
   </body>
+</html>
+  
+<?php
+
+require_once("conectar.php");
+
+if ($stmt = $conn->prepare("INSERT INTO usuarios (dni, usuario, clave) VALUES (?, ?, ?)"))
+{
+      $dni = $_POST['dni'];
+      $usuario = $_POST['usuario'];
+	    $password = $_POST['password'];
+	    $options = array("cost"=>4);
+	    $hashPassword = password_hash($password,PASSWORD_BCRYPT,$options);
+            
+      $stmt->bind_param("iss", $dni, $usuario, $hashPassword);
+	    $stmt->execute();
+  
+ if (!$stmt->error){
+   
+         echo "<table border=1 cellspacing=0 cellpading=0 align=center BORDER BGCOLOR=#141318>
+         <p><tr align=center > <td><font color=yellow ><div style=font-size:1.25em color:yellow> USUARIO REGISTRADO CON EXITO CLIK EN LOGIN! </div></td></tr></p>
+              </table>"; 
+                   }
+}
+
+?>
+<html>
+    <br><br><br><br><br>
+<a class="btn text-white btn-block btn-primary" href="login.html">Login</a>
 </html>
